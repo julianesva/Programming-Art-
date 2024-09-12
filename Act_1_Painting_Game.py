@@ -70,10 +70,19 @@ def rectangle(start, end):
 
     end_fill()
 
-
+"""Function for draw a triangle added"""
 def triangle(start, end):
     """Draw triangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(3):
+        forward(end.x - start.x)
+        left(120)
+
+    end_fill()
 
 
 def tap(x, y):
@@ -112,5 +121,6 @@ onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', draw_circle), 'c')
 """=============================Function for draw a rectangle added============================="""
 onkey(lambda: store('shape', rectangle), 'r')
+"""=============================Function for draw a triangle added============================="""
 onkey(lambda: store('shape', triangle), 't')
 done()
