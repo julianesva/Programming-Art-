@@ -61,12 +61,17 @@ def draw():
     stamp()
 
     for count in range(64):
+        x, y = xy(count)
         if hide[count]:
-            x, y = xy(count)
             square(x, y)
-            
+        else:
+            up()
+            """Centering the number."""
+            goto(x + 25, y)  
+            color('black')
+            write(tiles[count], align='center', font=('Arial', 30, 'normal'))
     
-    """Showing th path number in the left superior corner."""
+    """Showing the tap counter in the left superior corner."""
     up()
     goto(-180, 180)
     color('black')
@@ -77,9 +82,10 @@ def draw():
     if mark is not None and hide[mark]:
         x, y = xy(mark)
         up()
-        goto(x + 2, y)
+        """Centering the number."""
+        goto(x + 25, y)
         color('black')
-        write(tiles[mark], font=('Arial', 30, 'normal'))
+        write(tiles[mark], align='center', font=('Arial', 30, 'normal'))
     
     update()
     ontimer(draw, 100)
