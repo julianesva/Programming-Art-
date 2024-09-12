@@ -64,7 +64,9 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
+            """Logic for an infinite game, making the balls reposition themselves when they leave the screen to create an infinite game."""
+            target.x = 200  
+            target.y = randrange(-150, 150)  
 
     ontimer(move, 50)
 
