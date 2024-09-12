@@ -54,10 +54,21 @@ def draw_circle(start, end):
 
     end_fill()
 
-
+"""Function for draw a rectangle added"""
 def rectangle(start, end):
     """Draw rectangle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(2):
+        forward(end.x - start.x)
+        left(90)
+        forward(end.y - start.y)
+        left(90)
+
+    end_fill()
 
 
 def triangle(start, end):
@@ -97,7 +108,9 @@ onkey(lambda: color('red'), 'R')
 onkey(lambda: color('purple'), 'P')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
+"""=============================Function for draw a circle added============================="""
 onkey(lambda: store('shape', draw_circle), 'c')
+"""=============================Function for draw a rectangle added============================="""
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
