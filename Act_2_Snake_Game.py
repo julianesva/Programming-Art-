@@ -4,10 +4,8 @@ from turtle import *
 
 from freegames import square, vector
 
-# Definir los posibles colores (excluyendo el rojo)
+"""The color assignment of the food and the snake is done randomly in a range of 5 different colors and at the same time the logic makes it possible for the food and the snake to always have different colors among the random ones."""
 colors = ['blue', 'green', 'yellow', 'purple', 'orange']
-
-# Asignar colores diferentes para la serpiente y la comida
 snake_color = choice(colors)
 food_color = choice([color for color in colors if color != snake_color])
 
