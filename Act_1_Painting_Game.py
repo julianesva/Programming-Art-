@@ -45,11 +45,10 @@ def draw_circle(start, end):
     down()
     begin_fill()
 
-    # Calculate radius using math.sqrt
+    
     radius = math.sqrt((end.x - start.x) ** 2 + (end.y - start.y) ** 2) / 2
-    goto(start.x + radius, start.y)  # Move to the right to start drawing
+    goto(start.x + radius, start.y) 
 
-    # Use the turtle module's circle function to draw the circle
     circle(radius)  
 
     end_fill()
@@ -107,6 +106,7 @@ state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+"""SETTING THE ONKEY LISTENERS FUNCTIONS AND ANONYMOUS FUNCTIONS"""
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
