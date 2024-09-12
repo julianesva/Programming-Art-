@@ -138,18 +138,18 @@ def move_ghosts():
         distance_to_pacman = abs(pacman - point)
         """Define the distance threshold"""
         threshold = 100
-
+        """IMPORTANT: In this conditional we can change the velocity of the ghost only changing the parametrs that we store in the variable direction. This is because we actually change how many units of the board the ghosts are moving."""
         if distance_to_pacman < threshold:
             """If Pac-Man is close, attempt to move towards him"""
             direction = vector(0, 0)
             if point.x < pacman.x:
-                direction.x = 5
+                direction.x = 10
             elif point.x > pacman.x:
-                direction.x = -5
+                direction.x = -10
             if point.y < pacman.y:
-                direction.y = 5
+                direction.y = 10
             elif point.y > pacman.y:
-                direction.y = -5
+                direction.y = -10
 
             moved = False
             """Attempt to move in the calculated direction"""
