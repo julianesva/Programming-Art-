@@ -2,7 +2,7 @@ from random import *
 from turtle import *
 from freegames import path
 
-"""IMPORTANT: In order to make a better game or a game that improve the intelligence or memory of the players i implemented letters instead of numbers in this version of the game."""
+"""IMPORTANT: In order to make a better game or a game that improve the intelligence or memory of the players I implemented letters instead of numbers in this version of the game."""
 
 """Initialize the car variable with the image path"""
 car = path('car.gif') 
